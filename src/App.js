@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch } from "react-router-dom";
+import { Redirect } from "react-router";
+import routes from "./lib/routes";
+import "bootstrap/dist/css/bootstrap.min.css";
+import PrivateRoute from "./lib/privateroute";
+import PublicRoute from "./lib/publicroute";
 
-function App() {
+const App = () => {
+  const { restricted, unrestricted } = routes;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <BrowserRouter>
+        <Switch>
+          {restricted.map(({ path, component }) => (
+            <PrivateRoute key={path} path={path} component={component} />
+          ))}
+          {unrestricted.map(({ path, component }) => (
+            <PublicRoute key={path} exact path={path} component={component} />
+          ))}
+        </Switch>
+      </BrowserRouter>
+    </main>
   );
-}
+};
 
 export default App;

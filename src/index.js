@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { render } from 'react-snapshot';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { AuthProvider } from "./context/AuthContext";
 
-ReactDOM.render(
+render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
