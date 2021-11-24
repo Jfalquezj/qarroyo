@@ -32,8 +32,8 @@ const SignUp = () => {
   const loginusertodashboard = (username, password) => {
     loginUser(username, password)
       .then((data) => {
-        if (data.message === "ok") {
-          const user = data.data;
+        if (data.token) {
+          const user = data;
           auth.login(user);
           history.push("/dashboard");
         }
@@ -47,13 +47,13 @@ const SignUp = () => {
       name: name,
       username: username,
       password: password,
-      passwordConfirmation: passwordConfirmation,
       email: email,
+      role:"Paciente",
     };
     event.preventDefault();
     singupUser(userInfo)
       .then((data) => {
-        if (data.active) {
+        if (data.user) {
           loginusertodashboard(username, password);
         } else {
           setShowAlert(true);

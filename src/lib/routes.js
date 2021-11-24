@@ -3,7 +3,7 @@ import SignUp from "./../components/Public/SignUp";
 import Home from "./../components/Public/Home";
 import Recover from "./../components/Public/Recover";
 import Dashboard from "./../components/Private/Dashboard";
-
+import PerfilP from "./../components/Private/Psicologos/perfil/perfilpsicologo"
 
 const routes = {
   restricted: [
@@ -35,6 +35,11 @@ const routes = {
     {
       title: "Mi Perfil",
       path: "/perfil",
+      component: Dashboard,
+    },
+    {
+      title: "PerfilP",
+      path: "/psicologo/:id",
       component: Dashboard,
     },
   ],
