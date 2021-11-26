@@ -24,7 +24,7 @@ const Home = () => (
         <StyledHomeCol>
           <div>
             <DivVector><Vectorbrain /></DivVector>
-            <H1Home>Bienvenido a MejoraT</H1Home>
+            <H1Home>Bienvenido a Q`arroyo</H1Home>
             <Link to="/login">
               <Button large text="Login now" secondary fluid></Button>
             </Link>

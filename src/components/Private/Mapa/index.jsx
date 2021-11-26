@@ -38,7 +38,7 @@ export default function Mapa() {
 
   useEffect(() => {
     async function getAllMarkers() {
-      await fetch("https://tic2021.herokuapp.com/api/v1/reporte/")
+      await fetch("https://qarroyo.herokuapp.com/api/v1/reporte/")
         .then((response) => response.json())
         .then((data) => {
           const elems = data.reporte.map((data, index) => {
@@ -92,7 +92,7 @@ export default function Mapa() {
     const descripcion = document.getElementById("descripcion").value;
     if (markposition != null) {
       const { lat, lng } = markposition;
-      await fetch("https://tic2021.herokuapp.com/api/v1/reporte/create", {
+      await fetch("https://qarroyo.herokuapp.com/api/v1/reporte/create", {
         method: "POST",
         body: JSON.stringify({
           nivelArroyo,
@@ -143,11 +143,6 @@ export default function Mapa() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=f3ePDK7mOfdrsKDU0ZgW"
         />
-        <Marker position={position} icon={myIcon}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
         {markers}
         <LocationMarker />
       </MapContainer>
