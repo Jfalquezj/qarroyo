@@ -32,7 +32,7 @@ export const PHome = styled(P)`
 `;
 
 export const AHome = styled(A)`
-  color: #1abc9c;
+  color: #589EEE;
   &:hover {
     color: black;
   }

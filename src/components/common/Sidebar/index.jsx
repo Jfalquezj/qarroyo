@@ -33,11 +33,8 @@ const Side = ({ active }) => {
   const { restricted } = routes;
   const result = restricted.filter((word) =>
     [
-      "Psicologos",
-      "Mis Citas",
-      "Pendientes",
-      "Historial",
-      "Mi Perfil",
+      "Tablero",
+      "Perfil",
     ].includes(word.title)
   );
   return (

@@ -1,5 +1,5 @@
 const variables = {
-    primaryColor: "#1ABC9C",
+    primaryColor: "#589EEE",
     secondaryColor: "white",
     textPrimaryColor: "#333"
 };

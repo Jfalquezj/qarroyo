@@ -16,7 +16,7 @@ export const StyledButton = styled.button`
       background-color: ${primaryColor};
       color: ${secondaryColor};
       &:hover {
-        background-color: rgb(113, 232, 208);
+        background-color: #264e7c;
       }
     `}
 

@@ -3,6 +3,8 @@ import { render } from 'react-snapshot';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from "./context/AuthContext";
+import 'leaflet/dist/leaflet.css';
+
 
 render(
   <React.StrictMode>

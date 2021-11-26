@@ -22,7 +22,7 @@ export const PLogin = styled(P)`
 `;
 
 export const ALogin = styled(A)`
-  color: #1ABC9C;
+  color: #589EEE;
   margin-bottom: 200px;
   &:hover{
     color: #616161
